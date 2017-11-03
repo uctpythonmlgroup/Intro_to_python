@@ -11,7 +11,7 @@ class Vector:
             output_val=0
             for k in range(0,self.length):
                 output_val+=vect_arg.elements[k]*self.elements[k]
-        return output_val  # alternatively return Vector(output_val)
+        return output_val  # alternatively return Vector([output_val])
 
     def norm(self):
         output_val=0
@@ -20,4 +20,4 @@ class Vector:
         return mth.sqrt(output_val)
 
     def norm_2(self):
-        return self.dot_prod(Vector(self.elements))
+        return mth.sqrt(self.dot_prod(Vector(self.elements)))
